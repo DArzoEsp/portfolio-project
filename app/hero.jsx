@@ -1,4 +1,4 @@
-import Self from '../img/portfolio-portrait.png'
+import Self from '/images/portfolio-portrait.png'
 
 export default function Hero() {
     return (
