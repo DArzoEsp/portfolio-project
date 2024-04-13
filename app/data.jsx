@@ -3,14 +3,14 @@ export default [
         id: 1,
         projectName: 'EasyBank Landing Page' ,
         projectDescription: 'Front-End project. It is an example of a bank landing page. Used mostly Sass with combination of HTML and Javascript',
-        projectImg: '../images/easy-bank-frontend.png',
+        projectImg: '/images/easy-bank-frontend.png',
         projectLink: 'https://easy-bank-frontend.netlify.app/'
     },
     {
         id: 2,
         projectName: 'Recreate Pokemon',
         projectDescription: 'A game like pokemon. Used mostly vanilla Javascript for logic, Tiled to make the map, and GSAP to animate this game. Learned a lot about 2D game development',
-        projectImg: '../images/pokemon-screenshot.png',
+        projectImg: '/images/pokemon-screenshot.png',
         projectLink: 'https://pokemon-recreate.netlify.app/'
     },
     {
