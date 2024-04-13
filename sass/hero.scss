@@ -1,0 +1,59 @@
+@use 'functions.scss' as *;
+@use 'breakpoints.scss' as *;
+
+.hero { 
+    margin-bottom: rem(50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__title {
+        text-align: center;
+        font-size: rem(72);
+        -webkit-text-stroke:  rem(1) var(--shadow-color);
+    }
+
+    &__introduction {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        
+        @include breakpoint-down(medium) {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            padding: 0 rem(50);
+            text-align: center;
+        }
+    }
+
+    &__paragraph {
+        font-size: rem(36);
+        letter-spacing: rem(1.5);
+        margin-right: rem(15);
+        width: 50vw;
+
+        @include breakpoint-down(medium) {
+            font-size: rem(30);
+            width: 100%
+        }
+
+        @include breakpoint-down(small) {
+            font-size: rem(24);
+        }
+    }
+
+    &__img {
+        border-radius: rem(30);
+        box-shadow: rem(13) rem(13) rem(13) rem(7) var(--shadow-color);
+        object-fit: cover;
+        
+        @include breakpoint-down(medium) {
+            margin-top: rem(30);
+            width: rem(330);
+            height: rem(500);
+        }
+    }
+}

@@ -1,0 +1,3 @@
+@function rem($pixels) {
+    @return calc(($pixels / 16) * 1rem); // make it easy to convert to rem
+}

@@ -1,0 +1,37 @@
+@use 'functions' as *;
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    width: 100vw;
+    height: 7vh;
+    gap: rem(30);
+    background-color: var(--header-color);
+    box-shadow: 0 0 8px black;
+
+    &__link {
+        margin: 0;
+        padding: 0;
+        color: var(--icon-color);
+    }
+
+    &__link:active {
+        color:  var(--icon-color);
+    }
+
+    &__link:visited {
+        color: var(--icon-color);
+    }
+
+    &__icon {
+        font-size: rem(40); 
+        cursor: pointer;  
+        transition: all 150ms ease-in-out;     
+    }
+
+    &__icon:hover {
+        scale: calc(1.2);
+        color: var(--selected-color);
+    }
+}

@@ -1,0 +1,40 @@
+@forward 'header';
+@forward 'hero';
+@forward 'colors';
+@forward 'project';
+@forward 'functions';
+@forward 'breakpoints';
+@use 'functions.scss' as *;
+@use 'breakpoints.scss' as *;
+
+body {
+    font-family: Orbitron, sans-serif;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: #ffffff;
+    cursor: default;
+}
+
+
+.container-projects {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: rem(40);
+    margin: rem(50) 0;
+
+    @include breakpoint-down(medium) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    @include breakpoint-down(large) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    
+}

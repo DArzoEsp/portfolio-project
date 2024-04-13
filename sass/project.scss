@@ -1,0 +1,85 @@
+@use 'functions.scss' as *;
+@use 'breakpoints.scss' as *;
+
+.project {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    border-radius: rem(10);
+    box-shadow: rem(3) rem(3) rem(3) rem(3) black;
+    border: rem(1) solid black;
+    text-align: center;
+    min-height: 43vh;
+    width: 18vw;
+    background-color: var(--project-color);
+
+    @include breakpoint-down(large) {
+        min-width: rem(360);
+        min-height: 38vh;
+        flex-wrap: wrap;
+    }
+
+    @include breakpoint-down(xlarge) {
+        flex-wrap: wrap;
+        min-height: 46vh;
+    }
+
+    &:hover {
+        cursor: pointer;
+        scale: calc(1.1);
+        opacity: 0.75;
+        box-shadow: none;
+        border: none;
+        transition: all 150ms ease-in-out;
+    }
+    
+    &__link-container {
+        text-decoration: none;
+    }
+
+    &__link-container:visited {
+        color: var(--text-color);
+    }
+
+    &__title {
+        -webkit-text-stroke:  rem(1) var(--shadow-color);
+        text-align: center;
+        font-size: rem(72);
+    }
+
+    &__name {
+        font-size: rem(24);
+        margin: rem(10) 0;
+
+        @include breakpoint(xxlarge) {
+            font-size: rem(30);
+        }
+    }
+
+    &__description {
+        font-size: rem(14);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: rem(15);
+
+        @include breakpoint(xlarge) {
+            font-size: rem(16);
+        }
+
+        @include breakpoint(xxlarge) {
+            font-size: rem(24);
+        }
+    }
+
+    &__img {
+        width: 17vw;
+        height: 22vh;
+        object-fit: cover;
+        border-radius: rem(10);
+
+        @include breakpoint-down(large) {
+            min-width: rem(330);
+        }
+    }
+}
