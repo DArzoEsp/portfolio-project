@@ -6,7 +6,7 @@
     flex-wrap: nowrap;
     flex-direction: column;
     border-radius: rem(10);
-    box-shadow: rem(3) rem(3) rem(3) rem(3) black;
+    box-shadow: rem(3) rem(3) rem(3) rem(3) var(--shadow-color);
     border: rem(1) solid black;
     text-align: center;
     min-height: 43vh;
@@ -77,9 +77,11 @@
         height: 22vh;
         object-fit: cover;
         border-radius: rem(10);
+        border: 1px solid black; 
 
         @include breakpoint-down(large) {
             min-width: rem(330);
         }
     }
+
 }
