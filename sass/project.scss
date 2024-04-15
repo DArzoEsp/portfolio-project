@@ -1,17 +1,18 @@
 @use 'functions.scss' as *;
 @use 'breakpoints.scss' as *;
+@use 'colors.scss' as *;
 
 .project {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
     border-radius: rem(10);
-    box-shadow: rem(3) rem(3) rem(3) rem(3) var(--shadow-color);
+    box-shadow: rem(3) rem(3) rem(3) rem(3) $shadow-color;
     border: rem(1) solid black;
     text-align: center;
     min-height: 43vh;
     width: 18vw;
-    background-color: var(--project-color);
+    background-color: $project-color;
 
     @include breakpoint-down(large) {
         min-width: rem(360);
@@ -38,11 +39,11 @@
     }
 
     &__link-container:visited {
-        color: var(--text-color);
+        color: $text-color;
     }
 
     &__title {
-        -webkit-text-stroke:  rem(1) var(--shadow-color);
+        -webkit-text-stroke:  rem(1) $shadow-color;
         text-align: center;
         font-size: rem(72);
     }

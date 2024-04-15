@@ -1,11 +1,11 @@
 @forward 'header';
 @forward 'hero';
-@forward 'colors';
 @forward 'project';
 @forward 'skillset';
 @forward 'footer';
 @forward 'functions';
 @forward 'breakpoints';
+@use 'colors.scss' as *;
 @use 'functions.scss' as *;
 @use 'breakpoints.scss' as *;
 
@@ -14,8 +14,8 @@ body {
     font-weight: 600;
     margin: 0;
     padding: 0;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: $background-color;
+    color: $text-color;
     cursor: default;
 }
 

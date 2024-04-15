@@ -1,5 +1,6 @@
 @use 'functions.scss' as *;
 @use 'breakpoints.scss' as *;
+@use 'colors.scss' as *;
 
 .hero { 
     margin-bottom: rem(50);
@@ -10,7 +11,7 @@
     &__title {
         text-align: center;
         font-size: rem(72);
-        -webkit-text-stroke:  rem(1) var(--shadow-color);
+        -webkit-text-stroke:  rem(1) $shadow-color;
     }
 
     &__introduction {
@@ -47,7 +48,7 @@
 
     &__img {
         border-radius: rem(30);
-        box-shadow: rem(13) rem(13) rem(13) rem(7) var(--shadow-color);
+        box-shadow: rem(13) rem(13) rem(13) rem(7) $shadow-color;
         object-fit: cover;
         
         @include breakpoint-down(medium) {

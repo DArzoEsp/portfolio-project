@@ -1,5 +1,6 @@
 @use 'functions.scss' as *;
 @use 'breakpoints.scss' as *;
+@use 'colors.scss' as *;
 
 .header {
     display: grid;
@@ -7,32 +8,51 @@
     width: 100vw;
     height: 7vh;
     gap: rem(30);
-    background-color: var(--header-color);
+    background-color: $header-color;
     box-shadow: 0 0 8px black;
+
+    @include breakpoint-down(medium) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
 
     &__link-container {
         grid: link;
-        display: grid;
-        grid-template-columns: repeat( 4, 1fr);
-        place-items: center;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+
+        @include breakpoint-down(medium) {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
     }
 
     &__icon-container {
         grid: icons;
-        display: grid;
-        grid-template-columns: repeat( 3, 1fr);
-        place-items: center;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+        gap: rem(30);
+
+        @include breakpoint-down(medium) {
+            padding-right: rem(40);
+        }
     }
 
     &__icon-link {
         grid: icons;
-        width: rem(100);
         margin: 0;
         padding: 0;
         font-size: rem(40); 
         cursor: pointer;  
         transition: all 150ms ease-in-out; 
-        color: var(--icon-color);
+        color: $icon-color;
 
         @include breakpoint(xxlarge) {
             font-size: rem(50)
@@ -41,14 +61,32 @@
 
     &__icon-link:hover {
         scale: calc(1.2);
-        color: var(--selected-color);
+        color: $selected-color;
     }
 
     &__icon-link:active {
-        color:  var(--icon-color);
+        color:  $icon-color;
     }
 
     &__icon-link:visited {
-        color: var(--icon-color);
+        color: $icon-color;
     }
+}
+
+.link {
+    padding: 0 rem(30);
+    text-decoration: none;
+}
+
+.link:visited {
+    color: $icon-color;
+}
+
+.link:hover {
+    scale: calc(1.1);
+    color: $selected-color;
+}
+
+.link:last-child {
+    margin-right: rem(0);
 }

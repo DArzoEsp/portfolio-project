@@ -2,10 +2,10 @@ export default function Header() {
     return (
         <div className='header' alt='header'>
             <div className="header__link-container">
-                <a href="" className="header__home">Home</a>
-                <a href="" className="header__about">About Me</a>
-                <a href="" className="header__contact">Contact Me</a>
-                <a href="" className="header__projects">Projects</a>
+                <a href="" className="header__home link">Home</a>
+                <a href="" className="header__about link">About Me</a>
+                <a href="" className="header__contact link">Contact Me</a>
+                <a href="" className="header__projects link">Projects</a>
             </div>
             <div className="header__icon-container">
                 <a className="header__icon-link" href="https://github.com/DArzoEsp" target='_blank' rel='noreferrer noopener'>

@@ -1,7 +1,8 @@
 @use 'functions.scss' as *;
+@use 'colors.scss' as *;
 
 .footer {
     width: 100vw;
     height:  20vh;
-    background-color: var(--footer-color);
+    background-color: $footer-color;
 }
