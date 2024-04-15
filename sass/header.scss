@@ -1,37 +1,54 @@
-@use 'functions' as *;
+@use 'functions.scss' as *;
+@use 'breakpoints.scss' as *;
 
 .header {
-    display: flex;
-    align-items: center;
-    justify-content:center;
+    display: grid;
+    grid-template-areas: "link icons";
     width: 100vw;
     height: 7vh;
     gap: rem(30);
     background-color: var(--header-color);
     box-shadow: 0 0 8px black;
 
-    &__link {
-        margin: 0;
-        padding: 0;
-        color: var(--icon-color);
+    &__link-container {
+        grid: link;
+        display: grid;
+        grid-template-columns: repeat( 4, 1fr);
+        place-items: center;
     }
 
-    &__link:active {
+    &__icon-container {
+        grid: icons;
+        display: grid;
+        grid-template-columns: repeat( 3, 1fr);
+        place-items: center;
+    }
+
+    &__icon-link {
+        grid: icons;
+        width: rem(100);
+        margin: 0;
+        padding: 0;
+        font-size: rem(40); 
+        cursor: pointer;  
+        transition: all 150ms ease-in-out; 
+        color: var(--icon-color);
+
+        @include breakpoint(xxlarge) {
+            font-size: rem(50)
+        }
+    }
+
+    &__icon-link:hover {
+        scale: calc(1.2);
+        color: var(--selected-color);
+    }
+
+    &__icon-link:active {
         color:  var(--icon-color);
     }
 
-    &__link:visited {
+    &__icon-link:visited {
         color: var(--icon-color);
-    }
-
-    &__icon {
-        font-size: rem(40); 
-        cursor: pointer;  
-        transition: all 150ms ease-in-out;     
-    }
-
-    &__icon:hover {
-        scale: calc(1.2);
-        color: var(--selected-color);
     }
 }

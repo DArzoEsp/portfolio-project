@@ -2,6 +2,8 @@
 @forward 'hero';
 @forward 'colors';
 @forward 'project';
+@forward 'skillset';
+@forward 'footer';
 @forward 'functions';
 @forward 'breakpoints';
 @use 'functions.scss' as *;
@@ -37,4 +39,26 @@ body {
     }
     
     
+}
+
+.skill {
+    grid: skills;
+}
+
+.container-skillset {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    padding: 0 rem(200);
+    margin-bottom: rem(100);
+
+    @include breakpoint-down(medium) {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 rem(50);
+    }
+
+    @include breakpoint-down(small) {
+        grid-template-columns: 1fr;
+        padding: 0 rem(50);
+    }
 }

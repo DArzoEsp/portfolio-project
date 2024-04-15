@@ -1,0 +1,11 @@
+@use 'functions.scss' as *;
+
+.skillset {
+    font-size: rem(20);
+    &__title {
+        margin: rem(50) 0;
+        font-size: rem(72);
+        text-align: center;
+    }
+}
+
