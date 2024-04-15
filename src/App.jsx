@@ -4,8 +4,8 @@ import Header from '../app/header.jsx'
 import ProjectCard from '../app/project.jsx'
 import Skillset from '../app/skillset.jsx'
 import Footer from '../app/footer.jsx'
-import projectData from '../app/data.jsx'
-import skillsetData from '../app/skillData.jsx'
+import skillsetData from '../app/util/skillData.jsx'
+import projectData from '../app/util/projectData.jsx'
 
 function App() {
   const project = projectData.map(projectInfo => {
@@ -29,8 +29,8 @@ function App() {
   return (
     <div className='main container' alt='main display'>
       <Header />
-      <Hero />
-      <div className='project__title'>My Projects</div>
+      <Hero id='home'/>
+      <div className='project__title' id='projects'>My Projects</div>
       <div className='container-projects'>
         {project}
       </div>

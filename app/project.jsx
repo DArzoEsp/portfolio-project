@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
-export default function Project(props) {
-    console.log(`./img/${props.projectImg}`)
+export default function ProjectCard(props) {
     return (
         <div className="project">
             <a className="project__link-container" target='_blank' href={`${props.projectLink}`}>
